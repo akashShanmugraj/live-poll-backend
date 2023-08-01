@@ -3,7 +3,8 @@ const http = require('http').createServer()
 const io = require('socket.io')(http, {
     cors: {origin: "*"}
 });
-
+console.log("live-poll-backend express")
+console.time()
 const app = express();
 const product = require("./api/product");
 app.use(express.json({ extended: false }));
