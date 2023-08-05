@@ -21,12 +21,27 @@ app.get("/api", (req, res) => {
     res.send("API for live-poll-backend")
 })
 
+app.post("/api/post/response", (req, res) => {
+    console.log(JSON.parse(req.body));
+    res.send("OK").status(200);    
+}
+)
 app.post("/socket/:id", (req, res) => {
     const id = req.params.id
     var data = JSON.stringify(req.body)
     console.log(`Sending message ${data} to ${id}`)
     io.to(id).emit('message', data)
     res.send(`Sent message ${data} to ${id}`).status(200)
+})
+
+app.post("/test/:id", (req, res) => {
+    const now = new Date();
+    const options = { timeZone: 'Asia/Kolkata' };
+    const time = now.toLocaleString('en-IN', options);
+    
+    console.log(`Received message from ${req.params.id} at ${time}`)
+    console.log(req.body)
+    res.send("OK").status(200)
 })
 
 io.on('connection', (socket) => {
