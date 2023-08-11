@@ -57,6 +57,5 @@ io.on('connection', (socket) => {
     })
 });
 
-const PORT = 3840;
-http.listen(8080, () => console.log('Websocket ws://localhost:8080'))
-app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
+http.listen(3000, () => console.log('Websocket ws://localhost:8080'))
+app.listen(8080, () => console.log(`Server is running in port ${PORT}`));
