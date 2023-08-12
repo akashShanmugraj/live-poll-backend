@@ -6,6 +6,7 @@
   "engines": {
     "node": "16.x"
   },
+  "type":"module",
   "scripts": {
     "start": "npm i && node index.js"
   },

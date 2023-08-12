@@ -2,7 +2,7 @@ import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import bodyParser from 'body-parser';
-import UtilityRouter from './routes/utility.routes';
+import UtilityRouter from './routes/utility.routes.js';
 
 const app = express();
 app.use(bodyParser.json());

@@ -1,4 +1,4 @@
-import UtilityController from "../controllers/utility.controller";
+import UtilityController from "../controllers/utility.controller.js";
 import express from "express";
 
 const UtilityRouter = express.Router();
