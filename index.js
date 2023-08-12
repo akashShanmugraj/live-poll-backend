@@ -3,11 +3,16 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 import bodyParser from 'body-parser';
 import UtilityRouter from './routes/utility.routes.js';
+import cors from 'cors';
 
 const app = express();
 app.use(bodyParser.json());
 const httpServer = createServer(app);
-const io = new Server(httpServer);
+const io = new Server(httpServer, {
+  cors: {
+    origin: '*',
+  }
+});
 
 app.use('/utility', UtilityRouter);
 
