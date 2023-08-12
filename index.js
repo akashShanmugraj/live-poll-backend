@@ -24,10 +24,5 @@ io.on('connection', (socket) => {
   });
 });
 
-<<<<<<< HEAD
 httpServer.listen(3000, () => {console.log('Websocket at PORT 3000');});
 app.listen(8080, () => console.log(`Server at PORT 8080`));
-=======
-http.listen(3000, () => console.log('Websocket ws://localhost:8080'))
-app.listen(8080, () => console.log(`Server is running in port ${PORT}`));
->>>>>>> a37d8d13161a189cb8415ade3e869064cb1db43e
