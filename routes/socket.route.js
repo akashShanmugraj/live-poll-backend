@@ -4,4 +4,4 @@ import express from 'express';
 const SocketRouter = express.Router();
 
 SocketRouter.route("/nconn").post(SocketController.onConnection);
-SocketRouter.route("/relay").post((req, res) => {}));
+SocketRouter.route("/relay").post((req, res) => {});

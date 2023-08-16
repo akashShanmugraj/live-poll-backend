@@ -4,7 +4,7 @@ import { Server } from 'socket.io';
 import bodyParser from 'body-parser';
 import UtilityRouter from './routes/utility.routes.js';
 import SocketController from './controllers/socket.controller.js';
-import cors from 'cors';
+
 
 const app = express();
 app.use(bodyParser.json());
@@ -16,7 +16,9 @@ const io = new Server(httpServer, {
 });
 
 app.use('/utility', UtilityRouter);
-
+app.get('/api', (req, res) => {
+  res.send('Live-Poll API');
+});
 io.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('nconn', (msg) => {
@@ -25,6 +27,14 @@ io.on('connection', (socket) => {
   
   socket.on('disconnect', () => {
     console.log('user disconnected');
+  });
+
+  socket.on('info', (msg) => {
+   console.log(msg);
+  });
+
+  socket.on('err', (msg) => {
+    console.error(msg);
   });
 });
 
@@ -37,5 +47,5 @@ app.post('/relay/:id', (req, res) => {
     res.send(err)
   }
 });
-httpServer.listen(4040, () => {console.log('Websocket at PORT 3000');});
+httpServer.listen(4040, () => {console.log('Websocket at PORT 4040');});
 app.listen(8080, () => console.log(`Server at PORT 8080`));
