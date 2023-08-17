@@ -7,12 +7,9 @@ export default class SocketController {
         socketHandler.join(incomingMessage);
         const existingData = JSON.parse(readFileSync(`./data/${incomingMessage}.json`, (err, data) => {return data;}));
         socketHandler.emit('info', 'connection established sucessfully')
-        socketHandler.emit('load', existingData);
+        socketHandler.emit('relay', existingData);
     }
 
-    static async onLoad(source, heap){
-        
-    }
     static async onRelay(socketHandler, incomingMessage, roomID) {
         console.log(JSON.stringify(incomingMessage));
         const formData = JSON.parse(JSON.stringify(incomingMessage));
@@ -35,7 +32,7 @@ export default class SocketController {
           }
         }
         writeFileSync(`./data/${formID}.json`, JSON.stringify(formDatabase))
-        socketHandler.to(roomID).emit('relay', incomingMessage);
+        socketHandler.to(roomID).emit('relay', formDatabase);
     }
     
 }
