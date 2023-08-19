@@ -1,0 +1,9 @@
+{
+    "apps" : [
+        {
+            "name": "node-application",
+            "script": "node",
+            "args" : "index.js"
+        }
+    ]
+}
