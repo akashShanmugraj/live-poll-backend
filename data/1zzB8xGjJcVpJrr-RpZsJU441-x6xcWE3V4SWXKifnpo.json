@@ -1,1 +1,19 @@
-{"question0":{"title":"Choose your Male Representative","choices":{"Wade":6,"Willy":9}},"question1":{"title":"Choose your Female Representative","choices":{"Mary":39,"Christina":6}}}
+{
+    "question0": {
+        "choices": {
+            "Abinav P": 0,
+            "Anandkumar NS": 0,
+            "Rithvik K": 0,
+            "Hariharan D": 0
+        },
+        "title": "Choose your Male Representative"
+    },
+    "question1": {
+        "choices": {
+            "Dheekshitha R": 0,
+            "Abinaya Suresh": 0,
+            "Snesha B": 0
+        },
+        "title": "Choose your Female Representative"
+    }
+}
