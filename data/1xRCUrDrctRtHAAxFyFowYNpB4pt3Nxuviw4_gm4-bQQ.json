@@ -1,0 +1,19 @@
+{
+    "question0": {
+        "choices": {
+            "Abinav P": 0,
+            "Anandkumar NS": 0,
+            "Rithvik K": 0,
+            "Hariharan D": 0
+        },
+        "title": "Choose your Male Representative"
+    },
+    "question1": {
+        "choices": {
+            "Dheekshitha R": 0,
+            "Abinaya Suresh": 0,
+            "Snesha B": 0
+        },
+        "title": "Choose your Female Representative"
+    }
+}
