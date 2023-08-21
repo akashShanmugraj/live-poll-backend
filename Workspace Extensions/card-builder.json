@@ -1,0 +1,68 @@
+{
+  "sections": [
+    {
+      "widgets": []
+    },
+    {
+      "header": "Transmission Controls",
+      "widgets": [
+        {
+          "buttonList": {
+            "buttons": [
+              {
+                "text": "Start Relay",
+                "onClick": {
+                  "action": {
+                    "function": "TODO",
+                    "parameters": []
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "buttonList": {
+            "buttons": [
+              {
+                "text": "Stop Relay",
+                "onClick": {
+                  "action": {
+                    "function": "TODO",
+                    "parameters": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "header": "Data Controls",
+      "widgets": [
+        {
+          "buttonList": {
+            "buttons": [
+              {
+                "text": "Clear Relay",
+                "onClick": {
+                  "action": {
+                    "function": "TODO",
+                    "parameters": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "header": {
+    "title": "Akash Shanmugaraj",
+    "subtitle": "akashshanmugaraj@gmail.com",
+    "imageUrl": "https://source.unsplash.com/featured/320x180?nature&sig=8",
+    "imageType": "CIRCLE"
+  }
+}
