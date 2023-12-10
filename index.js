@@ -20,7 +20,9 @@ app.get('/api', (req, res) => {
   res.send('Live-Poll API');
 });
 io.on('connection', (socket) => {
+  
   console.log('a user connected');
+
   socket.on('nconn', (msg) => {
     SocketController.onConnection(socket, msg);
   });
@@ -48,4 +50,4 @@ app.post('/relay/:id', (req, res) => {
   }
 });
 httpServer.listen(4040, () => {console.log('Websocket at PORT 4040');});
-app.listen(8080, () => console.log(`Server at PORT 8080`));
+app.listen(3030, () => console.log(`Server at PORT 8080`));
