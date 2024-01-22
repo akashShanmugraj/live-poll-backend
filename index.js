@@ -40,6 +40,26 @@ io.on('connection', (socket) => {
   });
 });
 
+app.get('/notlive/:id', (req, res) => {
+  SocketController.onNotLive(io, req.params.id);
+  res.send('OK').status(200);
+});
+
+app.get('/live/:id', (req, res) => {
+  SocketController.onLive(io, req.params.id);
+  res.send('OK').status(200);
+});
+
+app.get('/abort/:id', (req, res) => {
+  SocketController.onAbort(io, req.params.id);
+  res.send('OK').status(200);
+});
+
+app.get('/reload/:id', (req, res) => {
+  SocketController.onReload(io, req.params.id);
+  res.send('OK').status(200);
+});
+
 app.post('/relay/:id', (req, res) => {
   try {
     SocketController.onRelay(io, req.body, req.params.id);
