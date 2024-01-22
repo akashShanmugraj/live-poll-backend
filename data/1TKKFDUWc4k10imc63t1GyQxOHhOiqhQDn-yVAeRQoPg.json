@@ -1,0 +1,17 @@
+{
+    "question0": {
+        "choices": {
+            "Abinav P": 0,
+            "Raj Ragavendar": 0,
+            "Pranavji": 0
+        },
+        "title": "Choose your Male Representative"
+    },
+    "question1": {
+        "choices": {
+            "Ramapriya S": 0,
+            "Geetha P K": 0
+        },
+        "title": "Choose your Female Representative"
+    }
+}
