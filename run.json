@@ -1,7 +1,7 @@
 {
     "apps" : [
         {
-            "name": "node-application",
+            "name": "live-poll-backend",
             "script": "node",
             "args" : "index.js"
         }
